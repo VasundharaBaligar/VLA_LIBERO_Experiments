@@ -1,0 +1,42 @@
+=== groot arm test ===
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[groot_base] libero_spatial task 0 trial 0: fail in 220 steps, hand ended 27.4 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_spatial_task0_trial0_fail.mp4
+[groot_base] libero_spatial task 0 trial 1: fail in 220 steps, hand ended 52.4 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_spatial_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[groot_base] libero_object task 0 trial 0: fail in 280 steps, hand ended 34.2 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_object_task0_trial0_fail.mp4
+[groot_base] libero_object task 0 trial 1: fail in 280 steps, hand ended 34.6 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_object_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[groot_base] libero_goal task 0 trial 0: fail in 300 steps, hand ended 28.0 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_goal_task0_trial0_fail.mp4
+[groot_base] libero_goal task 0 trial 1: fail in 300 steps, hand ended 37.9 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_goal_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[groot_base] libero_10 task 0 trial 0: fail in 520 steps, hand ended 45.8 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_10_task0_trial0_fail.mp4
+[groot_base] libero_10 task 0 trial 1: fail in 520 steps, hand ended 51.1 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/groot_base/libero_10_task0_trial1_fail.mp4
+
+groot_base: 0/8 successes
+=== groot ft_libero_spatial heatmaps ===
+groot ft_libero_spatial: 6/23 hits, mean lift 1.39x
+=== groot ft_libero_object heatmaps ===
+groot ft_libero_object: 6/23 hits, mean lift 1.39x
+=== groot ft_libero_goal heatmaps ===
+groot ft_libero_goal: 6/23 hits, mean lift 1.39x
+=== groot ft_libero_10 heatmaps ===
+groot ft_libero_10: 6/23 hits, mean lift 1.39x
+=== groot vlm heatmaps ===
+Traceback (most recent call last):
+  File "/workspace/libero_run/zeroshot/heatmap_groot.py", line 21, in <module>
+  File "/workspace/libero_run/env_groot/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+  File "/workspace/libero_run/env_groot/lib/python3.10/site-packages/transformers/modeling_utils.py", line 279, in _wrapper
+  File "/workspace/libero_run/env_groot/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4336, in from_pretrained
+  File "/workspace/libero_run/env_groot/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2109, in _autoset_attn_implementation
+  File "/workspace/libero_run/env_groot/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2252, in _check_and_enable_flash_attn_2
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+Traceback (most recent call last):
+  File "/workspace/libero_run/zeroshot/compare_heatmaps.py", line 19, in <module>
+    grids = {s: np.load(f"{DIR}/{MODEL}_{s}_grids.npz") for s in ["vlm", "vla"]}
+  File "/workspace/libero_run/zeroshot/compare_heatmaps.py", line 19, in <dictcomp>
+    grids = {s: np.load(f"{DIR}/{MODEL}_{s}_grids.npz") for s in ["vlm", "vla"]}
+  File "/workspace/libero_run/env/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/fa26-vla-cs670/zeroshot_results/heatmaps/groot_vlm_grids.npz'
+ALL_DONE

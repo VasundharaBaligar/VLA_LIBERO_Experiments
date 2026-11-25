@@ -1,0 +1,100 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /workspace/libero_run/env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/openvla/openvla-7b:
+- processing_prismatic.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:1727: DeprecationWarning: hf_xet.download_files() is deprecated. Use XetSession().new_file_download_group().start_download_file() instead.
+  xet_get(
+A new version of the following files was downloaded from https://huggingface.co/openvla/openvla-7b:
+- configuration_prismatic.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/openvla/openvla-7b:
+- modeling_prismatic.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:1727: DeprecationWarning: hf_xet.download_files() is deprecated. Use XetSession().new_file_download_group().start_download_file() instead.
+  xet_get(
+Downloading shards:  25%|██▌       | 1/4 [01:24<04:13, 84.39s/it]Downloading shards:  50%|█████     | 2/4 [02:37<02:35, 77.99s/it]Downloading shards:  75%|███████▌  | 3/4 [04:13<01:26, 86.26s/it]Downloading shards: 100%|██████████| 4/4 [04:45<00:00, 64.69s/it]Downloading shards: 100%|██████████| 4/4 [04:45<00:00, 71.41s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  7.63it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  8.80it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  9.22it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  9.24it/s]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 2] trial 0: success in 261 steps -> /workspace/fa26-vla-cs670/rollouts/task2_turn_on_the_stove_and_put_the_moka_pot_on_it_trial0_success.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 2] trial 1: fail in 520 steps -> /workspace/fa26-vla-cs670/rollouts/task2_turn_on_the_stove_and_put_the_moka_pot_on_it_trial1_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 2] trial 2: fail in 520 steps -> /workspace/fa26-vla-cs670/rollouts/task2_turn_on_the_stove_and_put_the_moka_pot_on_it_trial2_fail.mp4
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 7] trial 0: success in 252 steps -> /workspace/fa26-vla-cs670/rollouts/task7_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_b_trial0_success.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 7] trial 1: fail in 520 steps -> /workspace/fa26-vla-cs670/rollouts/task7_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_b_trial1_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 7] trial 2: success in 366 steps -> /workspace/fa26-vla-cs670/rollouts/task7_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_b_trial2_success.mp4
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 9] trial 0: fail in 520 steps -> /workspace/fa26-vla-cs670/rollouts/task9_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_trial0_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 9] trial 1: fail in 520 steps -> /workspace/fa26-vla-cs670/rollouts/task9_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_trial1_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (512, 556) to (512, 560) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[task 9] trial 2: success in 309 steps -> /workspace/fa26-vla-cs670/rollouts/task9_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_trial2_success.mp4
+
+SUMMARY
+  OK    trial 0  261 steps  turn on the stove and put the moka pot on it
+  FAIL  trial 1  520 steps  turn on the stove and put the moka pot on it
+  FAIL  trial 2  520 steps  turn on the stove and put the moka pot on it
+  OK    trial 0  252 steps  put both the alphabet soup and the cream cheese box in the basket
+  FAIL  trial 1  520 steps  put both the alphabet soup and the cream cheese box in the basket
+  OK    trial 2  366 steps  put both the alphabet soup and the cream cheese box in the basket
+  FAIL  trial 0  520 steps  put the yellow and white mug in the microwave and close it
+  FAIL  trial 1  520 steps  put the yellow and white mug in the microwave and close it
+  OK    trial 2  309 steps  put the yellow and white mug in the microwave and close it

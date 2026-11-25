@@ -1,0 +1,186 @@
+[
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "black bowl",
+  "hit": false,
+  "lift": 2.12
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "cookie box",
+  "hit": false,
+  "lift": 10.99
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "ramekin",
+  "hit": false,
+  "lift": 4.37
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "plate",
+  "hit": true,
+  "lift": 7.39
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "wooden cabinet",
+  "hit": false,
+  "lift": 2.15
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_spatial",
+  "object": "stove",
+  "hit": true,
+  "lift": 4.6
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "alphabet soup can",
+  "hit": false,
+  "lift": 2.11
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "basket",
+  "hit": false,
+  "lift": 5.51
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "salad dressing bottle",
+  "hit": false,
+  "lift": 7.65
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "cream cheese box",
+  "hit": false,
+  "lift": 1.86
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "milk carton",
+  "hit": false,
+  "lift": 2.55
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "tomato sauce can",
+  "hit": false,
+  "lift": 4.95
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_object",
+  "object": "butter",
+  "hit": false,
+  "lift": 3.66
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "black bowl",
+  "hit": true,
+  "lift": 7.97
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "cream cheese box",
+  "hit": true,
+  "lift": 12.55
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "wine bottle",
+  "hit": true,
+  "lift": 11.33
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "plate",
+  "hit": true,
+  "lift": 10.03
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "wooden cabinet",
+  "hit": false,
+  "lift": 1.02
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "stove",
+  "hit": false,
+  "lift": 3.03
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_goal",
+  "object": "wine rack",
+  "hit": false,
+  "lift": 2.36
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_10",
+  "object": "frying pan",
+  "hit": true,
+  "lift": 4.8
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_10",
+  "object": "moka pot",
+  "hit": false,
+  "lift": 4.77
+ },
+ {
+  "model": "pi05",
+  "stage": "vla",
+  "scene": "libero_10",
+  "object": "stove",
+  "hit": false,
+  "lift": 1.8
+ }
+]

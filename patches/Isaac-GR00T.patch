@@ -1,0 +1,53 @@
+diff --git a/gr00t/model/backbone/eagle2_hg_model/config.json b/gr00t/model/backbone/eagle2_hg_model/config.json
+index 3894adf..f1b95aa 100644
+--- a/gr00t/model/backbone/eagle2_hg_model/config.json
++++ b/gr00t/model/backbone/eagle2_hg_model/config.json
+@@ -1,5 +1,5 @@
+ {
+-    "_attn_implementation": "flash_attention_2",
++    "_attn_implementation": "sdpa",
+     "_commit_hash": null,
+     "architectures": [
+         "Eagle2_5_VLForConditionalGeneration"
+diff --git a/gr00t/model/backbone/eagle2_hg_model/modeling_eagle2_5_vl.py b/gr00t/model/backbone/eagle2_hg_model/modeling_eagle2_5_vl.py
+index a9649d5..7a78ad3 100755
+--- a/gr00t/model/backbone/eagle2_hg_model/modeling_eagle2_5_vl.py
++++ b/gr00t/model/backbone/eagle2_hg_model/modeling_eagle2_5_vl.py
+@@ -108,7 +108,7 @@ class Eagle2_5_VLForConditionalGeneration(Eagle2_5_VLPreTrainedModel, Generation
+             self.vision_model = vision_model
+         else:
+             if config.vision_config.model_type == "siglip_vision_model":
+-                config.vision_config._attn_implementation = "flash_attention_2"
++                config.vision_config._attn_implementation = "sdpa"  # local: no flash-attn on this machine
+                 self.vision_model = SiglipVisionModel(config.vision_config)
+             elif config.vision_config.model_type == "radio":
+                 self.vision_model = RADIOModel(config.vision_config)
+diff --git a/gr00t/model/backbone/eagle2_hg_model/radio_model.py b/gr00t/model/backbone/eagle2_hg_model/radio_model.py
+index 2df0415..f2f4359 100644
+--- a/gr00t/model/backbone/eagle2_hg_model/radio_model.py
++++ b/gr00t/model/backbone/eagle2_hg_model/radio_model.py
+@@ -42,14 +42,16 @@ from transformers.utils import ModelOutput
+ ####
+ 
+ 
+-try:  # v1
+-    from flash_attn.flash_attn_interface import flash_attn_unpadded_qkvpacked_func
+-except ImportError:  # v2
+-    from flash_attn.flash_attn_interface import (
+-        flash_attn_varlen_qkvpacked_func as flash_attn_unpadded_qkvpacked_func,
+-    )
+-
+-from flash_attn.bert_padding import pad_input, unpad_input
++try:  # local: flash-attn is optional here (only the unused RADIO encoder needs it)
++    try:  # v1
++        from flash_attn.flash_attn_interface import flash_attn_unpadded_qkvpacked_func
++    except ImportError:  # v2
++        from flash_attn.flash_attn_interface import (
++            flash_attn_varlen_qkvpacked_func as flash_attn_unpadded_qkvpacked_func,
++        )
++    from flash_attn.bert_padding import pad_input, unpad_input
++except ImportError:
++    pass
+ 
+ 
+ class FlashAttention(nn.Module):

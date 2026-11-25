@@ -1,0 +1,93 @@
+=== libero_spatial ===
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:38<01:54, 38.29s/it]Downloading shards:  50%|█████     | 2/4 [01:17<01:17, 38.73s/it]Downloading shards:  75%|███████▌  | 3/4 [01:57<00:39, 39.32s/it]Downloading shards: 100%|██████████| 4/4 [02:00<00:00, 25.03s/it]Downloading shards: 100%|██████████| 4/4 [02:00<00:00, 30.12s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  9.30it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00, 11.27it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.36it/s]
+libero_spatial plate tokens: ['▁plate'] hit False lift 0.76
+libero_spatial cookie box tokens: ['▁cookie', '▁box'] hit False lift 4.74
+libero_object tomato sauce can tokens: ['▁tom', 'ato', '▁sau', 'ce', '▁can'] hit False lift 1.29
+libero_object basket tokens: ['▁basket'] hit True lift 2.69
+libero_goal wine bottle tokens: ['▁wine', '▁bott', 'le'] hit False lift 4.82
+libero_goal stove tokens: ['▁st', 'ove'] hit False lift 1.36
+libero_10 moka pot tokens: ['▁m', 'oka', '▁pot'] hit False lift 5.83
+libero_10 frying pan tokens: ['▁f', 'ry', 'ing', '▁pan'] hit False lift 0.85
+openvla ft_libero_spatial: 1/8 hits, mean lift 2.79x
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_spatial', 'object': 'plate', 'hit': False, 'lift': 0.76}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_spatial', 'object': 'cookie box', 'hit': False, 'lift': 4.74}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_object', 'object': 'tomato sauce can', 'hit': False, 'lift': 1.29}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_object', 'object': 'basket', 'hit': True, 'lift': 2.69}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_goal', 'object': 'wine bottle', 'hit': False, 'lift': 4.82}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_goal', 'object': 'stove', 'hit': False, 'lift': 1.36}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_10', 'object': 'moka pot', 'hit': False, 'lift': 5.83}
+    {'model': 'openvla', 'stage': 'ft_libero_spatial', 'scene': 'libero_10', 'object': 'frying pan', 'hit': False, 'lift': 0.85}
+=== libero_object ===
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:38<01:55, 38.36s/it]Downloading shards:  50%|█████     | 2/4 [01:16<01:16, 38.15s/it]Downloading shards:  75%|███████▌  | 3/4 [01:55<00:38, 38.67s/it]Downloading shards: 100%|██████████| 4/4 [01:59<00:00, 25.02s/it]Downloading shards: 100%|██████████| 4/4 [01:59<00:00, 29.93s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  9.01it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00, 11.10it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.25it/s]
+libero_spatial plate tokens: ['▁plate'] hit False lift 0.99
+libero_spatial cookie box tokens: ['▁cookie', '▁box'] hit False lift 1.85
+libero_object tomato sauce can tokens: ['▁tom', 'ato', '▁sau', 'ce', '▁can'] hit False lift 0.97
+libero_object basket tokens: ['▁basket'] hit False lift 2.79
+libero_goal wine bottle tokens: ['▁wine', '▁bott', 'le'] hit True lift 4.92
+libero_goal stove tokens: ['▁st', 'ove'] hit False lift 0.94
+libero_10 moka pot tokens: ['▁m', 'oka', '▁pot'] hit False lift 4.05
+libero_10 frying pan tokens: ['▁f', 'ry', 'ing', '▁pan'] hit False lift 1.38
+openvla ft_libero_object: 1/8 hits, mean lift 2.24x
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_spatial', 'object': 'plate', 'hit': False, 'lift': 0.99}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_spatial', 'object': 'cookie box', 'hit': False, 'lift': 1.85}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_object', 'object': 'tomato sauce can', 'hit': False, 'lift': 0.97}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_object', 'object': 'basket', 'hit': False, 'lift': 2.79}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_goal', 'object': 'wine bottle', 'hit': True, 'lift': 4.92}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_goal', 'object': 'stove', 'hit': False, 'lift': 0.94}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_10', 'object': 'moka pot', 'hit': False, 'lift': 4.05}
+    {'model': 'openvla', 'stage': 'ft_libero_object', 'scene': 'libero_10', 'object': 'frying pan', 'hit': False, 'lift': 1.38}
+=== libero_goal ===
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:38<01:54, 38.24s/it]Downloading shards:  50%|█████     | 2/4 [01:15<01:15, 37.91s/it]Downloading shards:  75%|███████▌  | 3/4 [01:54<00:38, 38.07s/it]Downloading shards: 100%|██████████| 4/4 [01:57<00:00, 24.28s/it]Downloading shards: 100%|██████████| 4/4 [01:57<00:00, 29.33s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  9.26it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00, 11.00it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.24it/s]
+libero_spatial plate tokens: ['▁plate'] hit False lift 0.93
+libero_spatial cookie box tokens: ['▁cookie', '▁box'] hit False lift 5.35
+libero_object tomato sauce can tokens: ['▁tom', 'ato', '▁sau', 'ce', '▁can'] hit False lift 1.12
+libero_object basket tokens: ['▁basket'] hit False lift 2.28
+libero_goal wine bottle tokens: ['▁wine', '▁bott', 'le'] hit False lift 6.13
+libero_goal stove tokens: ['▁st', 'ove'] hit False lift 0.64
+libero_10 moka pot tokens: ['▁m', 'oka', '▁pot'] hit True lift 5.09
+libero_10 frying pan tokens: ['▁f', 'ry', 'ing', '▁pan'] hit False lift 0.91
+openvla ft_libero_goal: 1/8 hits, mean lift 2.81x
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_spatial', 'object': 'plate', 'hit': False, 'lift': 0.93}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_spatial', 'object': 'cookie box', 'hit': False, 'lift': 5.35}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_object', 'object': 'tomato sauce can', 'hit': False, 'lift': 1.12}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_object', 'object': 'basket', 'hit': False, 'lift': 2.28}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_goal', 'object': 'wine bottle', 'hit': False, 'lift': 6.13}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_goal', 'object': 'stove', 'hit': False, 'lift': 0.64}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_10', 'object': 'moka pot', 'hit': True, 'lift': 5.09}
+    {'model': 'openvla', 'stage': 'ft_libero_goal', 'scene': 'libero_10', 'object': 'frying pan', 'hit': False, 'lift': 0.91}
+=== libero_10 ===
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:37<01:53, 37.98s/it]Downloading shards:  50%|█████     | 2/4 [01:20<01:20, 40.50s/it]Downloading shards:  75%|███████▌  | 3/4 [01:58<00:39, 39.61s/it]Downloading shards: 100%|██████████| 4/4 [02:01<00:00, 25.20s/it]Downloading shards: 100%|██████████| 4/4 [02:01<00:00, 30.48s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  8.81it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00, 10.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 11.13it/s]
+libero_spatial plate tokens: ['▁plate'] hit False lift 1.73
+libero_spatial cookie box tokens: ['▁cookie', '▁box'] hit True lift 7.37
+libero_object tomato sauce can tokens: ['▁tom', 'ato', '▁sau', 'ce', '▁can'] hit False lift 2.55
+libero_object basket tokens: ['▁basket'] hit True lift 1.85
+libero_goal wine bottle tokens: ['▁wine', '▁bott', 'le'] hit False lift 4.99
+libero_goal stove tokens: ['▁st', 'ove'] hit False lift 1.31
+libero_10 moka pot tokens: ['▁m', 'oka', '▁pot'] hit False lift 3.54
+libero_10 frying pan tokens: ['▁f', 'ry', 'ing', '▁pan'] hit False lift 2.06
+openvla ft_libero_10: 2/8 hits, mean lift 3.18x
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_spatial', 'object': 'plate', 'hit': False, 'lift': 1.73}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_spatial', 'object': 'cookie box', 'hit': True, 'lift': 7.37}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_object', 'object': 'tomato sauce can', 'hit': False, 'lift': 2.55}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_object', 'object': 'basket', 'hit': True, 'lift': 1.85}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_goal', 'object': 'wine bottle', 'hit': False, 'lift': 4.99}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_goal', 'object': 'stove', 'hit': False, 'lift': 1.31}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_10', 'object': 'moka pot', 'hit': False, 'lift': 3.54}
+    {'model': 'openvla', 'stage': 'ft_libero_10', 'scene': 'libero_10', 'object': 'frying pan', 'hit': False, 'lift': 2.06}
+ALL_DONE

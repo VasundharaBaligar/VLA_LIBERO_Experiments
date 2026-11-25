@@ -1,0 +1,44 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /workspace/libero_run/env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  8.23it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  9.98it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  9.76it/s]
+/workspace/libero_run/env/lib/python3.10/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_spatial task 0 trial 0: fail in 220 steps, hand ended 65.3 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_spatial_task0_trial0_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_spatial task 0 trial 1: fail in 220 steps, hand ended 50.2 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_spatial_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_object task 0 trial 0: fail in 280 steps, hand ended 25.9 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_object_task0_trial0_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_object task 0 trial 1: fail in 280 steps, hand ended 33.5 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_object_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_goal task 0 trial 0: fail in 300 steps, hand ended 20.3 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_goal_task0_trial0_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_goal task 0 trial 1: fail in 300 steps, hand ended 27.2 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_goal_task0_trial1_fail.mp4
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_10 task 0 trial 0: fail in 520 steps, hand ended 52.6 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_10_task0_trial0_fail.mp4
+IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (384, 438) to (384, 448) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[openvla_base] libero_10 task 0 trial 1: fail in 520 steps, hand ended 27.5 cm from start -> /workspace/fa26-vla-cs670/zeroshot_results/openvla_base/libero_10_task0_trial1_fail.mp4
+
+openvla_base: 0/8 successes

@@ -1,0 +1,186 @@
+[
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "black bowl",
+  "hit": false,
+  "lift": 1.97
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "cookie box",
+  "hit": false,
+  "lift": 5.87
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "ramekin",
+  "hit": false,
+  "lift": 1.4
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "plate",
+  "hit": true,
+  "lift": 3.99
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "wooden cabinet",
+  "hit": false,
+  "lift": 1.4
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_spatial",
+  "object": "stove",
+  "hit": true,
+  "lift": 3.31
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "alphabet soup can",
+  "hit": false,
+  "lift": 2.32
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "basket",
+  "hit": true,
+  "lift": 2.71
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "salad dressing bottle",
+  "hit": true,
+  "lift": 3.65
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "cream cheese box",
+  "hit": false,
+  "lift": 1.95
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "milk carton",
+  "hit": false,
+  "lift": 2.37
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "tomato sauce can",
+  "hit": false,
+  "lift": 2.13
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_object",
+  "object": "butter",
+  "hit": false,
+  "lift": 3.64
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "black bowl",
+  "hit": false,
+  "lift": 4.4
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "cream cheese box",
+  "hit": false,
+  "lift": 2.1
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "wine bottle",
+  "hit": true,
+  "lift": 8.8
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "plate",
+  "hit": true,
+  "lift": 5.67
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "wooden cabinet",
+  "hit": false,
+  "lift": 1.07
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "stove",
+  "hit": true,
+  "lift": 2.56
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_goal",
+  "object": "wine rack",
+  "hit": false,
+  "lift": 0.56
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_10",
+  "object": "frying pan",
+  "hit": true,
+  "lift": 2.81
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_10",
+  "object": "moka pot",
+  "hit": false,
+  "lift": 2.24
+ },
+ {
+  "model": "groot",
+  "stage": "vlm",
+  "scene": "libero_10",
+  "object": "stove",
+  "hit": false,
+  "lift": 0.83
+ }
+]

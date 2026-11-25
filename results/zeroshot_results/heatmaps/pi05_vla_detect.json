@@ -1,0 +1,163 @@
+[
+ {
+  "scene": "libero_spatial",
+  "object": "black bowl",
+  "answer": "Yes, there is indeed a black bowl visible in the image. It's located on the right",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "cookie box",
+  "answer": "The cookie box in the image is indeed positioned to the right of the small square cookie. It'",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "ramekin",
+  "answer": "There is indeed a red ramekin visible in the image. It's located on the left side",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "plate",
+  "answer": "The image shows a total of 5 objects. There are 2 large, round objects that appear",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "wooden cabinet",
+  "answer": "The cabinet in the image is indeed positioned to the right of the black box. It appears to be",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "stove",
+  "answer": "The stove in the image is not actually a stove. It's a 3D model of",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "alphabet soup can",
+  "answer": "The correct answer is \"PredictNo.<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "basket",
+  "answer": "no<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "salad dressing bottle",
+  "answer": "Yes, there is indeed a salad dressing bottle visible in the image. It's located to the",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "cream cheese box",
+  "answer": "no<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "milk carton",
+  "answer": "Yes, there is indeed a milk carton visible in the image. It's located to the right",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "tomato sauce can",
+  "answer": "Yes, there is indeed a can of tomato sauce visible in the image. It's located on",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "butter",
+  "answer": "The image shows a collection of small objects arranged on a white tiled floor. These include a blue plastic",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "black bowl",
+  "answer": "Yes, there is indeed a black bowl visible in the image. It's located on the right",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "cream cheese box",
+  "answer": "no<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wine bottle",
+  "answer": "Yes, there is indeed a wine bottle visible in the image. It's located on the right",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "plate",
+  "answer": "Yes, there is indeed a white plate visible in the image. It's located on the right",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wooden cabinet",
+  "answer": "Yes<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "stove",
+  "answer": "The stove in the image is not actually a stove. It's a 3D model of",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wine rack",
+  "answer": "no<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_10",
+  "object": "frying pan",
+  "answer": "The image shows a black frying pan on a wooden table. It's positioned on the right side",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_10",
+  "object": "moka pot",
+  "answer": "There is no moka pot visible in this kitchen scene. The image shows a white stove with a",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_10",
+  "object": "stove",
+  "answer": "The stove in the kitchen is not visible in this image. The kitchen scene shows a white stove with",
+  "box": null,
+  "box_center_on_object": false
+ }
+]

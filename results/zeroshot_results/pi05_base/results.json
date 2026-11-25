@@ -1,0 +1,74 @@
+[
+ {
+  "model": "pi05_base",
+  "suite": "libero_spatial",
+  "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "trial": 0,
+  "success": false,
+  "steps": 220,
+  "hand_travel_cm": 130.5
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_spatial",
+  "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "trial": 1,
+  "success": false,
+  "steps": 220,
+  "hand_travel_cm": 51.9
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_object",
+  "task": "pick up the alphabet soup and place it in the basket",
+  "trial": 0,
+  "success": false,
+  "steps": 280,
+  "hand_travel_cm": 15.5
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_object",
+  "task": "pick up the alphabet soup and place it in the basket",
+  "trial": 1,
+  "success": false,
+  "steps": 280,
+  "hand_travel_cm": 16.6
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_goal",
+  "task": "open the middle drawer of the cabinet",
+  "trial": 0,
+  "success": false,
+  "steps": 300,
+  "hand_travel_cm": 135.8
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_goal",
+  "task": "open the middle drawer of the cabinet",
+  "trial": 1,
+  "success": false,
+  "steps": 300,
+  "hand_travel_cm": 54.4
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_10",
+  "task": "put both the alphabet soup and the tomato sauce in the basket",
+  "trial": 0,
+  "success": false,
+  "steps": 520,
+  "hand_travel_cm": 113.1
+ },
+ {
+  "model": "pi05_base",
+  "suite": "libero_10",
+  "task": "put both the alphabet soup and the tomato sauce in the basket",
+  "trial": 1,
+  "success": false,
+  "steps": 520,
+  "hand_travel_cm": 113.0
+ }
+]

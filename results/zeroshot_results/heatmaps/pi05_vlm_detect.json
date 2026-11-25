@@ -1,0 +1,218 @@
+[
+ {
+  "scene": "libero_spatial",
+  "object": "black bowl",
+  "answer": "<loc0448><loc0079><loc0543><loc0217> black bowl<eos>",
+  "box": [
+   19.75,
+   112.0,
+   54.25,
+   135.75
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "cookie box",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "ramekin",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "plate",
+  "answer": "<loc0657><loc0139><loc0799><loc0332> plate<eos>",
+  "box": [
+   34.75,
+   164.25,
+   83.0,
+   199.75
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "wooden cabinet",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_spatial",
+  "object": "stove",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "alphabet soup can",
+  "answer": "<loc0593><loc0425><loc0735><loc0520> alphabet soup can<eos>",
+  "box": [
+   106.25,
+   148.25,
+   130.0,
+   183.75
+  ],
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "basket",
+  "answer": "<loc0416><loc0079><loc0662><loc0327> basket<eos>",
+  "box": [
+   19.75,
+   104.0,
+   81.75,
+   165.5
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_object",
+  "object": "salad dressing bottle",
+  "answer": "<loc0472><loc0588><loc0646><loc0675> salad dressing bottle<eos>",
+  "box": [
+   147.0,
+   118.0,
+   168.75,
+   161.5
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_object",
+  "object": "cream cheese box",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "milk carton",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "tomato sauce can",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_object",
+  "object": "butter",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "black bowl",
+  "answer": "<loc0512><loc0435><loc0634><loc0579> black bowl<eos>",
+  "box": [
+   108.75,
+   128.0,
+   144.75,
+   158.5
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_goal",
+  "object": "cream cheese box",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wine bottle",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "plate",
+  "answer": "<loc0644><loc0442><loc0785><loc0621> plate<eos>",
+  "box": [
+   110.5,
+   161.0,
+   155.25,
+   196.25
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wooden cabinet",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "stove",
+  "answer": "<loc0000><loc0344><loc0348><loc0662> stove<eos>",
+  "box": [
+   86.0,
+   0.0,
+   165.5,
+   87.0
+  ],
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_goal",
+  "object": "wine rack",
+  "answer": "<eos>",
+  "box": null,
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_10",
+  "object": "frying pan",
+  "answer": "<loc0506><loc0710><loc0691><loc0974> frying pan<eos>",
+  "box": [
+   177.5,
+   126.5,
+   243.5,
+   172.75
+  ],
+  "box_center_on_object": true
+ },
+ {
+  "scene": "libero_10",
+  "object": "moka pot",
+  "answer": "<loc0000><loc0327><loc0327><loc0662> moka pot<eos>",
+  "box": [
+   81.75,
+   0.0,
+   165.5,
+   81.75
+  ],
+  "box_center_on_object": false
+ },
+ {
+  "scene": "libero_10",
+  "object": "stove",
+  "answer": "<loc0000><loc0000><loc0350><loc1022> stove<eos>",
+  "box": [
+   0.0,
+   0.0,
+   255.5,
+   87.5
+  ],
+  "box_center_on_object": false
+ }
+]

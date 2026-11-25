@@ -1,0 +1,13 @@
+=== ft_libero_spatial ===
+openvla ft_libero_spatial: 1/23 hits, mean lift 2.00x
+=== ft_libero_object ===
+openvla ft_libero_object: 1/23 hits, mean lift 1.87x
+=== ft_libero_goal ===
+openvla ft_libero_goal: 1/23 hits, mean lift 1.89x
+=== ft_libero_10 ===
+openvla ft_libero_10: 2/23 hits, mean lift 2.36x
+saved /workspace/fa26-vla-cs670/zeroshot_results/heatmaps/compare/libero_spatial_task0.png
+saved /workspace/fa26-vla-cs670/zeroshot_results/heatmaps/compare/libero_object_task0.png
+saved /workspace/fa26-vla-cs670/zeroshot_results/heatmaps/compare/libero_goal_task0.png
+saved /workspace/fa26-vla-cs670/zeroshot_results/heatmaps/compare/libero_10_task2.png
+ALL_DONE
