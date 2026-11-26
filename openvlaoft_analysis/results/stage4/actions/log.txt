@@ -1,0 +1,384 @@
+loaded 20630 queries in 1 s; points ['L0', 'L4', 'L8', 'L12', 'L16', 'L20', 'L24', 'L28', 'L31', 'norm']
+config: n_splits: 10
+seeds:
+- 0
+- 1
+- 2
+experiments:
+  actions:
+    train_suites:
+    - libero_spatial
+    targets:
+    - direction
+    - direction_030
+    - distance
+    - gripper
+    - contact
+  position:
+    train_suites:
+    - libero_spatial
+    - libero_spatial_swap
+    targets:
+    - target_xy
+linear:
+  features: standardized with the training mean / std of each split
+  logistic_l2:
+  - 0.0001
+  - 0.001
+  - 0.01
+  - 0.1
+  - 1.0
+  - 10.0
+  - 100.0
+  lbfgs_max_iter: 500
+  ridge_alpha:
+  - 1.0
+  - 10.0
+  - 100.0
+  - 1000.0
+  - 10000.0
+  - 100000.0
+  - 1000000.0
+mlp:
+  hidden: 256
+  dropout: 0.2
+  lr: 0.001
+  batch: 256
+  max_epochs: 200
+  patience: 10
+shuffled_control: training labels permuted within the training set, and validation
+  labels permuted within the validation set (seed 1000 + seed), so the control's hyperparameter
+  choice and early stopping never see real labels
+out_dir: results/stage4
+
+actions | L0 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 46 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 40 epochs | 9 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 39 epochs | 9 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 33 epochs | 8 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 42 epochs | 9 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 35 epochs | 9 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 29 epochs | 8 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 31 epochs | 8 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 43 epochs | 9 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 49 epochs | 10 s
+actions | L0 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 49 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 40 epochs | 9 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 54 epochs | 11 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 40 epochs | 9 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 36 epochs | 8 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 26 epochs | 7 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 32 epochs | 8 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 25 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 36 epochs | 8 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 48 epochs | 10 s
+actions | L0 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 48 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 44 epochs | 10 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 44 epochs | 10 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 51 epochs | 10 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 36 epochs | 8 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 28 epochs | 8 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 28 epochs | 7 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 30 epochs | 8 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 33 epochs | 8 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 45 epochs | 10 s
+actions | L4 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 46 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 77 epochs | 14 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 55 epochs | 11 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 68 epochs | 13 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 35 epochs | 8 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 68 epochs | 13 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 36 epochs | 8 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 50 epochs | 10 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 43 epochs | 9 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 41 epochs | 9 s
+actions | L4 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 39 epochs | 9 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 77 epochs | 14 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 62 epochs | 12 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 48 epochs | 10 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 32 epochs | 8 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 43 epochs | 10 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 49 epochs | 10 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 53 epochs | 11 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 42 epochs | 9 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 36 epochs | 9 s
+actions | L4 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 51 epochs | 11 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 68 epochs | 13 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 81 epochs | 15 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 48 epochs | 10 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 40 epochs | 9 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 49 epochs | 10 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 31 epochs | 8 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 41 epochs | 9 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 39 epochs | 9 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 50 epochs | 10 s
+actions | L8 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 40 epochs | 9 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 36 epochs | 9 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 34 epochs | 8 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 32 epochs | 8 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 22 epochs | 7 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 30 epochs | 8 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 24 epochs | 7 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 24 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 26 epochs | 7 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 34 epochs | 8 s
+actions | L8 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 29 epochs | 8 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 41 epochs | 9 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 31 epochs | 8 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 33 epochs | 8 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 24 epochs | 7 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 30 epochs | 8 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 33 epochs | 8 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 24 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 25 epochs | 7 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 23 epochs | 7 s
+actions | L8 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 51 epochs | 11 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 49 epochs | 15 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 47 epochs | 39 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 27 epochs | 7 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 22 epochs | 7 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 44 epochs | 10 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 19 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 40 epochs | 9 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 25 epochs | 7 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 53 epochs | 11 s
+actions | L12 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 34 epochs | 8 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 28 epochs | 8 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 24 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 30 epochs | 8 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 18 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 21 epochs | 7 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 18 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 35 epochs | 8 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 26 epochs | 7 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 23 epochs | 7 s
+actions | L12 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 17 epochs | 6 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 29 epochs | 8 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 21 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 20 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 18 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 17 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 18 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 22 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 20 epochs | 7 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 23 epochs | 7 s
+actions | L12 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 22 epochs | 7 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 24 epochs | 7 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 22 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 43 epochs | 9 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 24 epochs | 7 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 21 epochs | 7 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 18 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 32 epochs | 8 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 17 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 20 epochs | 7 s
+actions | L16 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 19 epochs | 7 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 18 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 16 epochs | 6 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 20 epochs | 7 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 13 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 14 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 14 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 14 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 14 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 16 epochs | 6 s
+actions | L16 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 17 epochs | 6 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 17 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 18 epochs | 6 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 18 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 22 epochs | 7 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 17 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 14 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 13 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 14 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 19 epochs | 6 s
+actions | L16 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 16 epochs | 6 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 19 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 38 epochs | 9 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 19 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 16 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 16 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 15 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 16 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 13 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 18 epochs | 6 s
+actions | L20 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 17 epochs | 6 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 20 epochs | 7 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 21 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 16 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 14 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 14 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 13 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 17 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 18 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 15 epochs | 6 s
+actions | L20 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 33 epochs | 8 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 18 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 17 epochs | 6 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 22 epochs | 7 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 16 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 24 epochs | 7 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 14 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 17 epochs | 9 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 12 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 19 epochs | 6 s
+actions | L20 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 45 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 15 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 14 epochs | 6 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 14 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 14 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 15 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 13 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 22 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 12 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 13 epochs | 6 s
+actions | L24 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 20 epochs | 7 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 21 epochs | 7 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 19 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 30 epochs | 8 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 14 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 17 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 13 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 15 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 16 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 14 epochs | 6 s
+actions | L24 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 17 epochs | 6 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 27 epochs | 7 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 30 epochs | 8 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 17 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 49 epochs | 10 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 15 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 13 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 20 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 13 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 15 epochs | 6 s
+actions | L24 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 108 epochs | 18 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 18 epochs | 6 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 18 epochs | 6 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 25 epochs | 7 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 16 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 17 epochs | 6 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 13 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 21 epochs | 7 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 13 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 13 epochs | 6 s
+actions | L28 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 26 epochs | 7 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 32 epochs | 8 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 20 epochs | 7 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 17 epochs | 6 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 20 epochs | 6 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 24 epochs | 7 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 17 epochs | 6 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 18 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 42 epochs | 12 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 42 epochs | 15 s
+actions | L28 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 200 epochs | 45 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 26 epochs | 12 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 50 epochs | 57 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 98 epochs | 86 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 200 epochs | 116 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 50 epochs | 68 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 14 epochs | 62 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 49 epochs | 71 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 20 epochs | 48 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 200 epochs | 98 s
+actions | L28 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 18 epochs | 51 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 27 epochs | 54 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 15 epochs | 51 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 17 epochs | 52 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 16 epochs | 51 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 17 epochs | 52 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 14 epochs | 51 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 21 epochs | 54 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 14 epochs | 52 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 16 epochs | 52 s
+actions | L31 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 35 epochs | 59 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 32 epochs | 56 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 28 epochs | 56 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 29 epochs | 56 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 30 epochs | 56 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 49 epochs | 60 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 18 epochs | 39 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 27 epochs | 56 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 41 epochs | 60 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 24 epochs | 56 s
+actions | L31 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 50 epochs | 62 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 30 epochs | 58 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 117 epochs | 81 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 18 epochs | 54 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 200 epochs | 99 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 53 epochs | 65 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 26 epochs | 56 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 22 epochs | 56 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 200 epochs | 100 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 200 epochs | 103 s
+actions | L31 last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 16 epochs | 54 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 28 epochs | 59 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 22 epochs | 57 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 22 epochs | 56 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 21 epochs | 56 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 19 epochs | 56 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 16 epochs | 55 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 18 epochs | 55 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 14 epochs | 53 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 17 epochs | 56 s
+actions | norm act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 70 epochs | 70 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 31 epochs | 60 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 35 epochs | 60 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 72 epochs | 70 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 24 epochs | 43 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 59 epochs | 19 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 15 epochs | 11 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 25 epochs | 12 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 62 epochs | 18 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 20 epochs | 12 s
+actions | norm act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 59 epochs | 18 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 33 epochs | 14 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 63 epochs | 19 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 200 epochs | 37 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 136 epochs | 28 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 53 epochs | 18 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 16 epochs | 11 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 20 epochs | 11 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 22 epochs | 12 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 45 epochs | 16 s
+actions | norm last
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 26 epochs | 13 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 29 epochs | 13 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 24 epochs | 13 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 29 epochs | 13 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 26 epochs | 13 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 20 epochs | 12 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 18 epochs | 9 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 19 epochs | 6 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 17 epochs | 6 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 19 epochs | 6 s
+done in 90.4 min

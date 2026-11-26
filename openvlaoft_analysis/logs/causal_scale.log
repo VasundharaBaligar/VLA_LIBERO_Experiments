@@ -1,0 +1,90 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /workspace/libero_run/env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Warning: make sure gym is installed if you want to use the GymWrapper.
+2026-11-26 18:22:18.616975: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 18:22:18.631847: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+Instantiating pretrained VLA policy...
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.23it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.44it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.50it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.54it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.50it/s]
+Loaded model: <class 'transformers_modules.moojink.openvla-7b-oft-finetuned-libero-spatial.6d0231af0e48c5985f1ff86908f4674b84bc049b.modeling_prismatic.OpenVLAForActionPrediction'>
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+task0_ep00_q07_early: done (38 rows)
+task0_ep00_q12_mid: done (76 rows)
+task0_ep00_q21_late: done (114 rows)
+task0_ep01_q07_early: done (152 rows)
+task0_ep01_q09_mid: done (190 rows)
+task0_ep01_q19_late: done (228 rows)
+task0_ep02_q07_early: done (266 rows)
+task0_ep02_q17_mid: done (304 rows)
+task0_ep02_q27_late: done (342 rows)
+task0_ep03_q07_early: done (380 rows)
+task0_ep03_q21_mid: done (418 rows)
+task0_ep03_q27_late: done (456 rows)
+task0_ep04_q07_early: done (494 rows)
+task0_ep04_q09_mid: done (532 rows)
+task0_ep04_q12_late: done (570 rows)
+task0_ep05_q07_early: done (608 rows)
+task0_ep05_q10_mid: done (646 rows)
+task0_ep05_q27_late: done (684 rows)
+task0_ep06_q07_early: done (722 rows)
+task0_ep06_q10_mid: done (760 rows)
+task0_ep06_q15_late: done (798 rows)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+task4_ep00_q08_early: done (836 rows)
+task4_ep00_q10_mid: done (874 rows)
+task4_ep00_q11_late: done (912 rows)
+task4_ep01_q08_early: done (950 rows)
+task4_ep01_q09_mid: done (988 rows)
+task4_ep01_q10_late: done (1026 rows)
+task4_ep02_q08_early: done (1064 rows)
+task4_ep02_q10_mid: done (1102 rows)
+task4_ep02_q11_late: done (1140 rows)
+task4_ep03_q08_early: done (1178 rows)
+task4_ep03_q10_mid: done (1216 rows)
+task4_ep03_q11_late: done (1254 rows)
+task4_ep04_q08_early: done (1292 rows)
+task4_ep04_q10_mid: done (1330 rows)
+task4_ep04_q12_late: done (1368 rows)
+task4_ep05_q07_early: done (1406 rows)
+task4_ep05_q09_mid: done (1444 rows)
+task4_ep05_q10_late: done (1482 rows)
+task4_ep06_q17_early: done (1520 rows)
+task4_ep06_q19_mid: done (1558 rows)
+task4_ep06_q20_late: done (1596 rows)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+task8_ep00_q09_early: done (1634 rows)
+task8_ep00_q10_mid: done (1672 rows)
+task8_ep00_q11_late: done (1710 rows)
+task8_ep01_q12_early: done (1748 rows)
+task8_ep01_q18_mid: done (1786 rows)
+task8_ep01_q19_late: done (1824 rows)
+task8_ep02_q09_early: done (1862 rows)
+task8_ep02_q10_mid: done (1900 rows)
+task8_ep02_q11_late: done (1938 rows)
+task8_ep03_q21_early: done (1976 rows)
+task8_ep03_q24_mid: done (2014 rows)
+task8_ep03_q27_late: done (2052 rows)
+task8_ep04_q09_early: done (2090 rows)
+task8_ep04_q10_mid: done (2128 rows)
+task8_ep04_q11_late: done (2166 rows)
+task8_ep05_q09_early: done (2204 rows)
+task8_ep05_q24_mid: done (2242 rows)
+task8_ep05_q27_late: done (2280 rows)
+task8_ep07_q09_early: done (2318 rows)
+task8_ep07_q10_mid: done (2356 rows)
+task8_ep07_q11_late: done (2394 rows)

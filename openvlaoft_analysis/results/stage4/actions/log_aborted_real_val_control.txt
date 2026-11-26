@@ -1,0 +1,66 @@
+loaded 20630 queries in 1 s; points ['L0', 'L4', 'L8', 'L12', 'L16', 'L20', 'L24', 'L28', 'L31', 'norm']
+config: n_splits: 10
+seeds:
+- 0
+- 1
+- 2
+experiments:
+  actions:
+    train_suites:
+    - libero_spatial
+    targets:
+    - direction
+    - direction_030
+    - distance
+    - gripper
+    - contact
+  position:
+    train_suites:
+    - libero_spatial
+    - libero_spatial_swap
+    targets:
+    - target_xy
+linear:
+  features: standardized with the training mean / std of each split
+  logistic_l2:
+  - 0.0001
+  - 0.001
+  - 0.01
+  - 0.1
+  - 1.0
+  - 10.0
+  - 100.0
+  lbfgs_max_iter: 500
+  ridge_alpha:
+  - 1.0
+  - 10.0
+  - 100.0
+  - 1000.0
+  - 10000.0
+  - 100000.0
+  - 1000000.0
+mlp:
+  hidden: 256
+  dropout: 0.2
+  lr: 0.001
+  batch: 256
+  max_epochs: 200
+  patience: 10
+shuffled_control: training labels permuted within the training set; val labels are
+  kept real, so the control gets the same hyperparameter search and early stopping
+  as the real probe
+out_dir: results/stage4
+
+actions | L0 act56
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 46 epochs | 10 s
+    split 1 (test task 1, val 2): train 5382 val 617 test 2097 | MLP stopped after 63 epochs | 12 s
+    split 2 (test task 2, val 3): train 5497 val 582 test 2017 | MLP stopped after 39 epochs | 9 s
+    split 3 (test task 3, val 4): train 5305 val 809 test 1982 | MLP stopped after 26 epochs | 7 s
+    split 4 (test task 4, val 5): train 5278 val 609 test 2209 | MLP stopped after 51 epochs | 10 s
+    split 5 (test task 5, val 6): train 5416 val 671 test 1943 | MLP stopped after 35 epochs | 9 s
+    split 6 (test task 6, val 7): train 5214 val 811 test 2071 | MLP stopped after 72 epochs | 13 s
+    split 7 (test task 7, val 8): train 5267 val 618 test 2211 | MLP stopped after 55 epochs | 11 s
+    split 8 (test task 8, val 9): train 5314 val 764 test 2018 | MLP stopped after 47 epochs | 10 s
+    split 9 (test task 9, val 0): train 5414 val 518 test 2164 | MLP stopped after 68 epochs | 13 s
+actions | L0 act7
+    split 0 (test task 0, val 1): train 5481 val 697 test 1918 | MLP stopped after 41 epochs | 9 s

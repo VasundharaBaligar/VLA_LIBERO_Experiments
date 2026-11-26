@@ -1,0 +1,205 @@
+2026-11-26 09:11:47.117587: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 09:11:47.133055: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /workspace/libero_run/env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+Warning: make sure gym is installed if you want to use the GymWrapper.
+Instantiating pretrained VLA policy...
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.21it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.41it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.55it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.49it/s]
+Loaded model: <class 'transformers_modules.moojink.openvla-7b-oft-finetuned-libero-spatial.6d0231af0e48c5985f1ff86908f4674b84bc049b.modeling_prismatic.OpenVLAForActionPrediction'>
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task0_ep00: success=False queries=28 steps=220 7.2s size=0.77 MB
+libero_spatial_swap/task0_ep01: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep02: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task0_ep03: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep04: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task0_ep05: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep06: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep08: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task0_ep09: success=False queries=28 steps=220 6.9s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task4_ep00: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task4_ep01: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task4_ep02: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task4_ep03: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task4_ep04: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task4_ep05: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task4_ep06: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task4_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task4_ep08: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task4_ep09: success=False queries=28 steps=220 6.8s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task5_ep00: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task5_ep01: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task5_ep02: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task5_ep03: success=True queries=24 steps=188 6.0s size=0.66 MB
+libero_spatial_swap/task5_ep04: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task5_ep05: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task5_ep06: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task5_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task5_ep08: success=True queries=27 steps=213 6.7s size=0.74 MB
+libero_spatial_swap/task5_ep09: success=False queries=28 steps=220 7.1s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task6_ep00: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep01: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task6_ep02: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep03: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep04: success=False queries=28 steps=220 7.1s size=0.77 MB
+libero_spatial_swap/task6_ep05: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep06: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task6_ep08: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task6_ep09: success=False queries=28 steps=220 6.8s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task7_ep00: success=False queries=28 steps=220 7.2s size=0.77 MB
+libero_spatial_swap/task7_ep01: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task7_ep02: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task7_ep03: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task7_ep04: success=False queries=28 steps=220 7.3s size=0.77 MB
+libero_spatial_swap/task7_ep05: success=False queries=28 steps=220 7.1s size=0.77 MB
+libero_spatial_swap/task7_ep06: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task7_ep07: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task7_ep08: success=False queries=28 steps=220 7.3s size=0.77 MB
+libero_spatial_swap/task7_ep09: success=False queries=28 steps=220 7.1s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task8_ep00: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task8_ep01: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task8_ep02: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task8_ep03: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task8_ep04: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task8_ep05: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task8_ep06: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task8_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task8_ep08: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task8_ep09: success=False queries=28 steps=220 6.8s size=0.77 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial_swap/task9_ep00: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep01: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep02: success=False queries=28 steps=220 6.8s size=0.77 MB
+libero_spatial_swap/task9_ep03: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep04: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep05: success=False queries=28 steps=220 7.0s size=0.77 MB
+libero_spatial_swap/task9_ep06: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep07: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep08: success=False queries=28 steps=220 6.9s size=0.77 MB
+libero_spatial_swap/task9_ep09: success=False queries=28 steps=220 7.0s size=0.77 MB
+peak GPU memory 14.98 GiB
+2026-11-26 09:20:08.901229: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-11-26 09:20:08.916509: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /workspace/libero_run/env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+Warning: make sure gym is installed if you want to use the GymWrapper.
+Instantiating pretrained VLA policy...
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.27it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.46it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.50it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.57it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.52it/s]
+Loaded model: <class 'transformers_modules.moojink.openvla-7b-oft-finetuned-libero-spatial.6d0231af0e48c5985f1ff86908f4674b84bc049b.modeling_prismatic.OpenVLAForActionPrediction'>
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task0_ep00: success=True queries=11 steps=81 3.3s size=0.31 MB
+libero_spatial/task0_ep01: success=True queries=10 steps=77 2.8s size=0.28 MB
+libero_spatial/task0_ep02: success=True queries=11 steps=82 2.9s size=0.31 MB
+libero_spatial/task0_ep03: success=True queries=10 steps=77 2.8s size=0.28 MB
+libero_spatial/task0_ep04: success=True queries=10 steps=75 2.7s size=0.28 MB
+libero_spatial/task0_ep05: success=True queries=10 steps=78 2.8s size=0.28 MB
+libero_spatial/task0_ep06: success=True queries=10 steps=77 2.8s size=0.28 MB
+libero_spatial/task0_ep07: success=True queries=11 steps=82 3.0s size=0.31 MB
+libero_spatial/task0_ep08: success=True queries=10 steps=80 2.8s size=0.28 MB
+libero_spatial/task0_ep09: success=True queries=10 steps=80 2.8s size=0.28 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task4_ep00: success=True queries=17 steps=129 4.4s size=0.47 MB
+libero_spatial/task4_ep01: success=True queries=18 steps=138 4.6s size=0.50 MB
+libero_spatial/task4_ep02: success=True queries=15 steps=120 4.0s size=0.42 MB
+libero_spatial/task4_ep03: success=True queries=16 steps=125 4.2s size=0.44 MB
+libero_spatial/task4_ep04: success=True queries=15 steps=117 4.0s size=0.42 MB
+libero_spatial/task4_ep05: success=True queries=16 steps=125 4.2s size=0.44 MB
+libero_spatial/task4_ep06: success=True queries=17 steps=131 4.4s size=0.47 MB
+libero_spatial/task4_ep07: success=True queries=16 steps=122 4.1s size=0.44 MB
+libero_spatial/task4_ep08: success=True queries=16 steps=127 4.2s size=0.44 MB
+libero_spatial/task4_ep09: success=True queries=16 steps=121 4.1s size=0.44 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task5_ep00: success=True queries=12 steps=89 3.3s size=0.33 MB
+libero_spatial/task5_ep01: success=True queries=12 steps=93 3.3s size=0.33 MB
+libero_spatial/task5_ep02: success=True queries=12 steps=89 3.2s size=0.33 MB
+libero_spatial/task5_ep03: success=True queries=12 steps=90 3.2s size=0.33 MB
+libero_spatial/task5_ep04: success=True queries=11 steps=84 3.0s size=0.31 MB
+libero_spatial/task5_ep05: success=True queries=12 steps=89 3.2s size=0.33 MB
+libero_spatial/task5_ep06: success=True queries=12 steps=89 3.2s size=0.33 MB
+libero_spatial/task5_ep07: success=True queries=12 steps=90 3.2s size=0.33 MB
+libero_spatial/task5_ep08: success=True queries=11 steps=88 3.1s size=0.31 MB
+libero_spatial/task5_ep09: success=True queries=12 steps=89 3.2s size=0.33 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task6_ep00: success=True queries=14 steps=112 3.7s size=0.39 MB
+libero_spatial/task6_ep01: success=True queries=13 steps=99 3.4s size=0.36 MB
+libero_spatial/task6_ep02: success=True queries=13 steps=100 3.4s size=0.36 MB
+libero_spatial/task6_ep03: success=True queries=13 steps=97 3.4s size=0.36 MB
+libero_spatial/task6_ep04: success=True queries=13 steps=104 3.5s size=0.36 MB
+libero_spatial/task6_ep05: success=True queries=13 steps=104 3.5s size=0.36 MB
+libero_spatial/task6_ep06: success=True queries=14 steps=111 3.7s size=0.39 MB
+libero_spatial/task6_ep07: success=True queries=13 steps=100 3.4s size=0.36 MB
+libero_spatial/task6_ep08: success=True queries=13 steps=104 3.5s size=0.36 MB
+libero_spatial/task6_ep09: success=True queries=13 steps=97 3.4s size=0.36 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task7_ep00: success=True queries=14 steps=112 3.8s size=0.39 MB
+libero_spatial/task7_ep01: success=True queries=14 steps=111 3.8s size=0.39 MB
+libero_spatial/task7_ep02: success=True queries=15 steps=120 4.1s size=0.42 MB
+libero_spatial/task7_ep03: success=True queries=15 steps=115 4.0s size=0.42 MB
+libero_spatial/task7_ep04: success=True queries=15 steps=116 4.0s size=0.42 MB
+libero_spatial/task7_ep05: success=True queries=15 steps=117 4.1s size=0.42 MB
+libero_spatial/task7_ep06: success=True queries=14 steps=111 3.8s size=0.39 MB
+libero_spatial/task7_ep07: success=True queries=15 steps=117 4.1s size=0.42 MB
+libero_spatial/task7_ep08: success=True queries=16 steps=121 4.2s size=0.44 MB
+libero_spatial/task7_ep09: success=True queries=15 steps=115 4.0s size=0.42 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task8_ep00: success=True queries=13 steps=103 3.5s size=0.36 MB
+libero_spatial/task8_ep01: success=True queries=13 steps=99 3.4s size=0.36 MB
+libero_spatial/task8_ep02: success=True queries=12 steps=95 3.3s size=0.33 MB
+libero_spatial/task8_ep03: success=True queries=12 steps=96 3.3s size=0.33 MB
+libero_spatial/task8_ep04: success=True queries=12 steps=94 3.3s size=0.33 MB
+libero_spatial/task8_ep05: success=True queries=12 steps=91 3.2s size=0.33 MB
+libero_spatial/task8_ep06: success=True queries=12 steps=92 3.2s size=0.33 MB
+libero_spatial/task8_ep07: success=True queries=12 steps=89 3.2s size=0.33 MB
+libero_spatial/task8_ep08: success=True queries=13 steps=103 3.5s size=0.36 MB
+libero_spatial/task8_ep09: success=True queries=12 steps=92 3.2s size=0.33 MB
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+[Warning]: datasets path /workspace/libero_run/LIBERO/libero/libero/../datasets does not exist!
+libero_spatial/task9_ep00: success=True queries=15 steps=115 3.9s size=0.42 MB
+libero_spatial/task9_ep01: success=True queries=15 steps=118 3.9s size=0.42 MB
+libero_spatial/task9_ep02: success=True queries=15 steps=117 3.9s size=0.42 MB
+libero_spatial/task9_ep03: success=True queries=14 steps=112 3.7s size=0.39 MB
+libero_spatial/task9_ep04: success=True queries=14 steps=112 3.7s size=0.39 MB
+libero_spatial/task9_ep05: success=True queries=15 steps=113 3.9s size=0.42 MB
+libero_spatial/task9_ep06: success=True queries=15 steps=113 3.9s size=0.42 MB
+libero_spatial/task9_ep07: success=True queries=15 steps=118 3.9s size=0.42 MB
+libero_spatial/task9_ep08: success=True queries=16 steps=121 4.1s size=0.44 MB
+libero_spatial/task9_ep09: success=True queries=16 steps=125 4.1s size=0.44 MB
+peak GPU memory 14.98 GiB

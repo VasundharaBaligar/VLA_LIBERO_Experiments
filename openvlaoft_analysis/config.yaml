@@ -1,0 +1,112 @@
+# Probing study on OpenVLA-OFT (frozen). Every setting used by collect.py / probes.py lives here.
+
+model:
+  checkpoint: moojink/openvla-7b-oft-finetuned-libero-spatial   # official, from moojink/openvla-oft LIBERO.md
+  # Official eval defaults (openvla-oft experiments/robot/libero/run_libero_eval.py, GenerateConfig):
+  use_l1_regression: true
+  use_diffusion: false
+  use_film: false
+  num_images_in_input: 2          # agentview + wrist
+  use_proprio: true
+  center_crop: true
+  num_open_loop_steps: 8          # the model is queried once per 8-action chunk
+  lora_rank: 32
+  dtype: bfloat16
+  attention: sdpa                 # official default (flash_attention_2 is commented out in openvla_utils.get_vla)
+
+env:
+  suites:
+    libero_spatial: {bddl_dir: DEFAULT, init_states: DEFAULT}       # LIBERO's own files
+    libero_spatial_swap:                                            # LIBERO-PRO position swap (Zxy-MLlab/LIBERO-PRO)
+      bddl_dir: data/libero_pro/bddl_files/libero_spatial_swap      # from hf datasets/zhouxueyang/LIBERO-Pro
+      init_states: data/libero_pro/init_files/libero_spatial_swap
+  max_steps: 220                  # TASK_MAX_STEPS[libero_spatial]; LIBERO-PRO uses 220 for libero_spatial_swap too
+  num_steps_wait: 10
+  env_img_res: 256
+  env_seed: 0                     # get_libero_env calls env.seed(0)
+  seed: 7                         # GenerateConfig.seed -> set_seed_everywhere
+
+hooks:
+  layers: [0, 4, 8, 12, 16, 20, 24, 28, 31]   # every 4th decoder layer + the last (outputs of language_model.model.layers[i])
+  final_norm: true                            # + output of language_model.model.norm = what the action head reads
+  positions:                                  # sequence = <BOS> | 512 patches + 1 proprio | prompt | 56 action slots | </s>
+    act56: mean over the 56 positions the action head reads ([N+P, N+P+56); N = 513, P = prompt tokens)
+    act7: mean over the first 7 of those positions (the chunk's first action = the one executed next)
+    last: the final position (the </s> stop token)
+  save_dtype: bfloat16
+
+labels:
+  target_object: obj_of_interest[0]   # akita_black_bowl_1 in every LIBERO-Spatial task (checked: checks/check_target_bowl.py)
+  place_object: obj_of_interest[1]    # plate_1
+  next_action: first action of the predicted chunk (unnormalized, as executed)
+  gripper_closed: next commanded gripper action after process_action (+1 = close in LIBERO)
+  contact: env.check_contact(robot gripper, target object)
+  grasp_rule:                         # evaluated at every simulator step; phase latches at the first grasped step
+    contact: true
+    gripper_command: close
+    lift_m: 0.02                      # bowl height above its resting height (measured after num_steps_wait)
+  target_position: bowl before grasp, plate after grasp
+  image_frame: agentview, 256x256, rotated 180 deg as the policy sees it (x right, y down); policy 224 crop also saved
+  direction_stay_threshold: 0.10      # main setting: 'stay' if every |xyz| < 0.10 (4.6% of LIBERO-Spatial queries)
+  direction_stay_threshold_sensitivity: 0.30   # sensitivity check (16.3% stay), same saved actions
+  distance_bins: 8                    # quantile edges of ||xyz|| on each split's training queries
+
+collection:
+  episodes_per_task: 50
+  out_dir: data/collected
+
+patch_check:                          # "where does the model see the plate": tokens of agentview patches
+  spots:                              # fixed spots, 256 env frame px (mean plate positions from Stage 3)
+    A: [116.7, 190.3]                 # plate after the swap in tasks 0, 2, 4, 5, 8
+    B: [164.9, 114.4]                 # task 6
+    C: [71.1, 131.2]                  # tasks 7, 9
+    O: [59.4, 187.4]                  # original spot (LIBERO-Spatial, all tasks)
+  present_radius_px: 17               # plate counts as at a spot if its center is within ~1 patch (16.9 px)
+  references: [plate_now, random]     # token at the plate's current patch, and at a random other patch
+  tasks: [0, 4, 5, 6, 7, 8, 9]
+  libero_spatial_swap: {episodes: [0, 1, 2, 3], stride: 2}
+  libero_spatial: {episodes: [0, 1, 2], stride: 1}    # plate at O: gives spot O its plate-present examples
+  out_dir: data/patch_check
+
+causal:                               # causal checks after Stage 5 (causal.py)
+  attention_dir: data/attention       # collect.py --attention: 10 episodes per task, tasks 0 4 5 6 7 8 9, both suites
+  patch_tasks: [0, 4, 5, 8]           # spot A tasks only (the claim is limited to A)
+  patch_episodes: [0, 1, 2]           # episode 0 -> early, 1 -> mid, 2 -> late query in the carry
+  patch_layers: [0, 4, 8, 16, 24, 31] # outputs of these decoder layers are patched
+  original_plate_world_xy: [0.060, 0.199]   # plate position in LIBERO-Spatial (same in all tasks)
+  metres_per_action_unit: 0.012       # eef move per unit of summed chunk xyz (fit on Stage 3: 0.0115-0.0128)
+  out_dir: results/causal
+  scale:                              # scaled patching: early / mid / late carry query from every listed episode
+    episodes: {0: [0, 1, 2, 3, 4, 5, 6], 4: [0, 1, 2, 3, 4, 5, 6], 8: [0, 1, 2, 3, 4, 5, 7]}   # task 5 excluded
+    out_subdir: scale
+
+probes:
+  # Split by task: split k tests on task k, validates on task (k+1) % 10, trains on the other 8 -> every task is
+  # held out once (10 splits). Swap episodes of the test task are evaluated in the same split.
+  n_splits: 10
+  seeds: [0, 1, 2]                    # MLP init + batch order, and the label permutation of the shuffled control
+  experiments:
+    actions:  {train_suites: [libero_spatial], targets: [direction, direction_030, distance, gripper, contact]}
+    position: {train_suites: [libero_spatial, libero_spatial_swap], targets: [target_xy]}   # avoids the suite shortcut
+    # Plate test (after-grasp states only; evaluated on after-grasp swap queries of the held-out task).
+    #   plate_xy: the plate's current image position; placement_xy: where the bowl ended up in that episode.
+    #   Original plate spot = mean LIBERO-Spatial plate position (the same in all 10 tasks).
+    plate_swap:  {train_suites: [libero_spatial_swap], train_phase: after, targets: [plate_xy, placement_xy]}
+    plate_mixed: {train_suites: [libero_spatial, libero_spatial_swap], train_phase: after,   # shows the Spatial bias
+                  targets: [plate_xy, placement_xy]}
+  plate_test_groups: {main: [0, 4, 5, 7, 8, 9], task6_unique_spot: [6], separate: [1, 2, 3]}
+  linear:
+    features: standardized with the training mean / std of each split
+    logistic_l2: [1.0e-4, 1.0e-3, 1.0e-2, 1.0e-1, 1.0, 10.0, 100.0]  # mean class-balanced CE + l2/2 |W|^2, picked on val bal. acc.
+    lbfgs_max_iter: 500
+    ridge_alpha: [1.0, 10.0, 100.0, 1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6]  # picked on val mean pixel error
+  mlp:                                # 4096 -> 256 -> ReLU -> dropout -> out
+    hidden: 256
+    dropout: 0.2
+    lr: 1.0e-3
+    batch: 256
+    max_epochs: 200
+    patience: 10                      # early stopping on validation loss (class-balanced CE / MSE)
+  shuffled_control: training labels permuted within the training set, and validation labels permuted within the
+    validation set (seed 1000 + seed), so the control's hyperparameter choice and early stopping never see real labels
+  out_dir: results/stage4
